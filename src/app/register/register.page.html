@@ -1,0 +1,79 @@
+<ion-buttons slot="start">
+  <ion-back-button defaultHref="/"></ion-back-button>
+</ion-buttons>
+
+<ion-content [fullscreen]="true" [fullscreen]="true" class="ion-content-center">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img  src="../../assets/img/logoMICPADA.png" alt="Logo" />
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="card">
+      <ion-col>
+        <ion-card color="light">
+          <ion-card-header>
+            <ion-card-title></ion-card-title>
+            <ion-card-content>
+              <p class="text"> {{ toggleChecked ? 'Ingrese el correo y la contraseña con la que se ingresará en la app, cuando haga clic en el botón "registrarse", recibirá un correo electrónico para confirmar su cuenta.' :  'Enter the email and password you will use to log in to the app, when you click on the "register" button, you will receive an email to confirm your account.'  }}</p>
+            </ion-card-content>
+          </ion-card-header>
+        </ion-card>
+        <ion-toggle [(ngModel)]="toggleChecked">{{ toggleChecked ? 'Traducir': 'Translate'}}</ion-toggle><br /><br />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <form class="center-form">
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input
+              type="email"
+              #email
+              required
+              placeholder="example@mail.com"
+            ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input
+              type="{{ showPassword ? 'text' : 'password' }}"
+              #password
+              required
+              pattern="^(?=.*[A-Z]).+$"
+              placeholder="********"
+            ></ion-input>
+            <ion-icon name="{{ showPassword ? 'eye-off' : 'eye' }}" slot="end" (click)="togglePasswordVisibility()"></ion-icon>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Name</ion-label>
+            <ion-input
+              type="name"
+              #name
+              required
+            ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Last name</ion-label>
+            <ion-input type="lastName" #lastName required></ion-input>
+          </ion-item>
+        </form>
+        <ion-button
+        expand="block"
+          (click)="signUp(email, password, name, lastName)"
+          class="custom-btn"
+          >Register</ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

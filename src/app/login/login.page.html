@@ -1,0 +1,41 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="image-container">
+    <img src="../../assets/img/logoMICPADA.png" alt="Logo">
+  </div>
+
+  <ion-grid class="grid-container">
+    <ion-row class="rowInputs">
+      <ion-col size="12">
+        <form>
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" #email required placeholder="example@mail.com"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="{{ hidePassword ? 'password' : 'text' }}" [(ngModel)]="passwordModel" #password required placeholder="********"></ion-input>
+            <ion-icon slot="end" name="{{ hidePassword ? 'eye' : 'eye-off' }}" (click)="togglePasswordVisibility()" class="icon-Eyed"></ion-icon>
+          </ion-item>
+        </form>
+      </ion-col>
+      <ion-col>
+        <a  [routerLink]="['/password-reset']" class="link">Forgot your password? Click here.</a>
+        <br>
+        <br>
+
+      </ion-col>
+      <ion-col>
+        <a (click)="this.router.navigate(['register']);"  class="link"> Don't have an account?<span>Register here.</span> </a>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button class="custom-btn" (click)="logIn(email, password)" expand="block">
+          <ion-label>Login</ion-label>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.container h2 {
+  margin-bottom: 10px;
+}
+
+.container img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.container ion-button {
+  width: 80%;
+  --background: #7b818b;
+}
+
+.container a {
+  margin-top: 20px;
+  display: block;
+}
+
+.container a span {
+  text-decoration: underline;
+}

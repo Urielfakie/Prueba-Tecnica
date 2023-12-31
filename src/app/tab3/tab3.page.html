@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+
+  <div class="image-container">
+    <img src="../../assets/img/logoMICPADA.png" alt="Logo" />
+  </div>
+
+  <div >
+    <ion-card>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="stacked">Base (b)</ion-label>
+          <ion-input [(ngModel)]="base" type="number" placeholder="Ingrese la base"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Altura (h)</ion-label>
+          <ion-input [(ngModel)]="altura" type="number" placeholder="Ingrese la altura"></ion-input>
+        </ion-item>
+
+        <ion-button expand="block" class="custom-btn" (click)="calcularArea()">Calcular Área</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>

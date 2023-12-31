@@ -1,0 +1,37 @@
+.custom-btn {
+  --background: #7b818b;
+}
+img {
+  width: 30%;
+  margin: auto;
+  display: block;
+}
+ion-grid {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.card{
+  height: 40%;
+  margin: auto;
+  display: block;
+}
+ion-card {
+  height: 155px;
+  width: 280px;
+}
+ion-card.ion-color .ion-inherit-color, ion-card-header.ion-color .ion-inherit-color {
+  color: #0000005b;
+}
+.card-content-md p {
+
+  margin-top: -21px;
+  margin-bottom: 3px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.label-Register{
+  font-weight: bold;
+  font-size: 20px;
+}

@@ -1,0 +1,15 @@
+
+
+<ion-content>
+  <div class="container">
+    <h2>Verification email sent</h2>
+    <p>Check your email inbox <br> or the spam folder.</p>
+
+    <img src="../../assets/img/mail_send.png" alt="">
+
+    <ion-button type="submit" (click)="goToLogin()" expand="block">Go to Login</ion-button>
+
+    <a (click)="authService.SendVerificationMail()" (click)="resendMail()">You have not received anything? <span>Forward mail</span></a>
+  </div>
+    
+</ion-content>

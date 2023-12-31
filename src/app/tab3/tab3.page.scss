@@ -1,0 +1,13 @@
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45%;
+}
+.custom-btn {
+  --background: #7b818b;
+}
+.image-container img {
+  width: 150px;
+  height: auto;
+}

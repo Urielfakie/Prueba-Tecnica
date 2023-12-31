@@ -1,0 +1,56 @@
+
+ion-grid {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.rowImg {
+  justify-content: center;
+  align-items: flex-start;
+
+}
+
+.image-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.image-container img {
+  width: 200px;
+  height: auto;
+}
+.rowImg ion-col {
+  text-align: center;
+}
+
+.rowInputs {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.rowInputs ion-col {
+  align-items: flex-start;
+  text-align: start;
+}
+#icon {
+  text-align: center;
+}
+.forgotPass {
+  font-size: 15px;
+  color: #03045e;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.icon-Eyed{
+font-size: 30px;
+}
+.custom-btn {
+  --background: #7b818b;
+}
+
+.link{
+  font-size: small;
+}
+
